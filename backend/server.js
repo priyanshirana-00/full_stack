@@ -12,7 +12,7 @@ dotenv.config();
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static("public"));
+app.use(express.static("../frontend"));
 
 // Initialize Generative AI client
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);

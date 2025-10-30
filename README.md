@@ -30,17 +30,18 @@ A modern, responsive chat application powered by Google's Gemini AI with user au
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
-   cd "Full Stack"
+   git clone https://github.com/priyanshirana-00/full_stack.git
+   cd full_stack
    ```
 
-2. **Install dependencies**
+2. **Install backend dependencies**
    ```bash
+   cd backend
    npm install
    ```
 
 3. **Set up environment variables**
-   Create a `.env` file in the root directory:
+   Create a `.env` file in the `backend` directory:
    ```env
    GEMINI_API_KEY=your_gemini_api_key_here
    JWT_SECRET=your_jwt_secret_here
@@ -48,7 +49,7 @@ A modern, responsive chat application powered by Google's Gemini AI with user au
    GOOGLE_CLIENT_ID=your_google_client_id_here (optional)
    ```
 
-4. **Start the server**
+4. **Start the backend server**
    ```bash
    npm start
    ```
@@ -68,20 +69,24 @@ A modern, responsive chat application powered by Google's Gemini AI with user au
 ## Project Structure
 
 ```
-Full Stack/
-├── public/
-│   ├── index.html       # Main chat interface
-│   ├── login.html       # Login page
-│   ├── signup.html      # Registration page
-│   ├── index.css        # Chat page styles
-│   ├── auth.css         # Authentication page styles
-│   ├── chat.js          # Chat functionality
-│   ├── auth.js          # Authentication logic
-│   └── script.js        # General scripts
-├── index.js             # Main server file
-├── package.json         # Dependencies and scripts
-├── .env                 # Environment variables (not tracked)
-└── .gitignore          # Git ignore rules
+full_stack/
+├── backend/
+│   ├── server.js            # Main server file
+│   ├── package.json         # Backend dependencies
+│   ├── .env                 # Environment variables (not tracked)
+│   └── README.md           # Backend documentation
+├── frontend/
+│   ├── index.html          # Main chat interface
+│   ├── login.html          # Login page
+│   ├── signup.html         # Registration page
+│   ├── index.css           # Chat page styles
+│   ├── auth.css            # Authentication page styles
+│   ├── chat.js             # Chat functionality
+│   ├── auth.js             # Authentication logic
+│   ├── script.js           # General scripts
+│   └── README.md           # Frontend documentation
+├── README.md               # Main documentation
+└── .gitignore             # Git ignore rules
 ```
 
 ## API Endpoints
