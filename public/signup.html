@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign up • Chat Assistant</title>
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body>
+  <div class="grid-overlay"></div>
+  <div class="card">
+    <div class="brand">
+      <div class="logo">CA</div>
+      <strong>Chat Assistant</strong>
+    </div>
+  <h1 style="margin-left: 4px;">Create your account</h1>
+  <p class="sub">Join and start chatting right away. </p>
+
+    <div class="meta-badges" aria-hidden="true">
+      <span>Gemini Powered</span>
+    </div>
+
+    <form id="signup-form">
+      <label for="name">Full name</label>
+      <input type="text" id="name" placeholder="Your name" required />
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="you@example.com" required />
+
+  <label for="password">Password</label>
+  <input type="password" id="password" placeholder="At least 8 characters" minlength="8" required />
+
+      <button class="primary centered-btn" type="submit">Sign up</button>
+      <a href="login.html" class="text-link-btn">Already have an account? <span>Sign in</span></a>
+
+      <p id="auth-error" class="error" style="display:none"></p>
+    </form>
+
+  </div>
+
+  <script src="/config.js"></script>
+  <script>window.AUTH_MODE = 'signup';</script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="auth.js"></script>
+</body>
+</html>
