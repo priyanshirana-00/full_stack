@@ -31,12 +31,11 @@ A modern, responsive chat application powered by Google's Gemini AI with user au
 1. **Clone the repository**
    ```bash
    git clone https://github.com/priyanshirana-00/full_stack.git
-   cd full_stack
+   cd full_stack/backend
    ```
 
-2. **Install backend dependencies**
+2. **Install dependencies**
    ```bash
-   cd backend
    npm install
    ```
 
@@ -47,9 +46,10 @@ A modern, responsive chat application powered by Google's Gemini AI with user au
    JWT_SECRET=your_jwt_secret_here
    MONGODB_URI=your_mongodb_connection_string_here
    GOOGLE_CLIENT_ID=your_google_client_id_here (optional)
+   PORT=5000
    ```
 
-4. **Start the backend server**
+4. **Start the server**
    ```bash
    npm start
    ```
@@ -71,22 +71,14 @@ A modern, responsive chat application powered by Google's Gemini AI with user au
 ```
 full_stack/
 ├── backend/
+│   ├── public/              # Frontend files (HTML, CSS, JS)
 │   ├── server.js            # Main server file
-│   ├── package.json         # Backend dependencies
+│   ├── package.json         # Dependencies
 │   ├── .env                 # Environment variables (not tracked)
-│   └── README.md           # Backend documentation
-├── frontend/
-│   ├── index.html          # Main chat interface
-│   ├── login.html          # Login page
-│   ├── signup.html         # Registration page
-│   ├── index.css           # Chat page styles
-│   ├── auth.css            # Authentication page styles
-│   ├── chat.js             # Chat functionality
-│   ├── auth.js             # Authentication logic
-│   ├── script.js           # General scripts
-│   └── README.md           # Frontend documentation
-├── README.md               # Main documentation
-└── .gitignore             # Git ignore rules
+│   └── .env.example         # Environment template
+├── render.yaml              # Render deployment config
+├── README.md                # Main documentation
+└── .gitignore              # Git ignore rules
 ```
 
 ## API Endpoints
@@ -153,6 +145,37 @@ The application is fully responsive with breakpoints at:
 - ✅ Firefox (latest)
 - ✅ Safari (latest)
 - ✅ Opera (latest)
+
+## Deployment on Render
+
+1. **Push your code to GitHub** (already done!)
+
+2. **Create a Render account** at https://render.com
+
+3. **Create a new Web Service**
+   - Connect your GitHub repository
+   - Select the `full_stack` repository
+   - Render will automatically detect the `render.yaml` file
+
+4. **Add Environment Variables** in Render dashboard:
+   - `GEMINI_API_KEY` - Your Google Gemini AI API key
+   - `JWT_SECRET` - A secure random string
+   - `MONGODB_URI` - Your MongoDB Atlas connection string
+   - `GOOGLE_CLIENT_ID` - (Optional) Your Google OAuth Client ID
+   - `NODE_ENV` - Set to `production`
+
+5. **Deploy!**
+   - Click "Create Web Service"
+   - Render will build and deploy automatically
+   - Your app will be live at `https://your-app-name.onrender.com`
+
+### Manual Deployment (Alternative)
+
+If `render.yaml` doesn't work, manually configure:
+- **Root Directory:** `backend`
+- **Build Command:** `npm install`
+- **Start Command:** `npm start`
+- **Environment:** Node
 
 ## License
 
