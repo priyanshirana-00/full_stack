@@ -155,7 +155,7 @@ This project is open source and available under the MIT License.
 
 ## Author
 
-Built with ❤️ by Priyanshu Rana
+Built with ❤️ by Priyanshi Rana
 
 ## Acknowledgments
 
