@@ -1,6 +1,34 @@
-# Full-Stack Chat Application
+<div align="center">
 
-A modern, responsive chat application powered by Google's Gemini AI with user authentication and MongoDB storage.
+# 🤖 Full-Stack Chat Application
+
+### AI-Powered Chat with Gemini AI
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node.js](https://img.shields.io/badge/Node.js-18%2B-green.svg)](https://nodejs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248.svg)](https://www.mongodb.com/atlas)
+[![Render](https://img.shields.io/badge/Deploy-Render-46E3B7.svg)](https://render.com)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
+A modern, responsive chat application powered by Google's Gemini AI with secure user authentication and MongoDB storage.
+
+[Live Demo](#) • [Features](#features) • [Installation](#installation) • [Deployment](#deployment-on-render)
+
+</div>
+
+---
+
+## 📸 Screenshots
+
+<div align="center">
+
+### Chat Interface
+*Modern glassmorphism design with real-time AI responses*
+
+### Authentication Pages
+*Secure login and signup with Google OAuth support*
+
+</div>
 
 ## Features
 
@@ -26,7 +54,27 @@ A modern, responsive chat application powered by Google's Gemini AI with user au
 - **Modern CSS** (Glassmorphism, Gradients, Animations)
 - **Responsive Design** (Mobile-first approach)
 
-## Installation
+## 🚀 Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/priyanshirana-00/full_stack.git
+cd full_stack/backend
+
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env.example .env
+# Edit .env with your API keys
+
+# Start the server
+npm start
+
+# Open http://localhost:5000 in your browser
+```
+
+## 📋 Installation
 
 1. **Clone the repository**
    ```bash

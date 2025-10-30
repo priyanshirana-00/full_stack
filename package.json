@@ -1,0 +1,1 @@
+{"name":"full-stack-chat-app","version":"1.0.0","description":"AI-Powered Chat Application","author":"Priyanshu Rana","license":"MIT","repository":{"type":"git","url":"https://github.com/priyanshirana-00/full_stack.git"},"scripts":{"start":"cd backend && npm start"},"engines":{"node":">=18.0.0"}}
