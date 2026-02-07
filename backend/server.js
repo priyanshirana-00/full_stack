@@ -102,6 +102,11 @@ app.post("/auth/login", async (req, res) => {
     const user = await User.findOne({ email: email.toLowerCase() });
     if (!user) return res.status(401).json({ error: "Invalid credentials" });
     
+    // Check if user has a password hash (users who signed up via Google OAuth won't have one)
+    if (!user.hash) {
+      return res.status(401).json({ error: "This account uses Google sign-in. Please sign in with Google." });
+    }
+    
     const ok = await bcrypt.compare(password, user.hash);
     if (!ok) return res.status(401).json({ error: "Invalid credentials" });
     
